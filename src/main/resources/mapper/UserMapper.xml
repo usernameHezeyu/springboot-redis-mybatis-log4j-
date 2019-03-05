@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.testproject.mapper.UserMapper">
+    <select id="findAll" resultType="com.example.testproject.entity.UserEntity">
+        select * from user
+    </select>
+
+    <select id="finduser" parameterType="com.example.testproject.entity.UserEntity" resultType="com.example.testproject.entity.UserEntity">
+        select * from user
+        where username=#{userEntity.username} and password=#{userEntity.password}
+    </select>
+</mapper>
