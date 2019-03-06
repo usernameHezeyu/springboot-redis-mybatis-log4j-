@@ -28,6 +28,13 @@ public class RedisItools {
     private RedisTemplate redisTemplate;
 
 
+    /***序列化方法
+     * @Author HeZeyu
+     * @Description //TODO
+     * @Date 14:10 2019/3/6
+     * @Param [factory]
+     * @return org.springframework.data.redis.core.RedisTemplate<java.lang.Object,java.lang.Object>
+     */
     @Bean
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory factory) {
         RedisTemplate redisTemplate = new StringRedisTemplate(factory);
